@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: #080c10;
+  --color-foreground: #c9d1d9;
+  --color-card: #0d1117;
+  --color-card-foreground: #c9d1d9;
+  --color-primary: #238636;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #161b22;
+  --color-secondary-foreground: #8b949e;
+  --color-muted: #161b22;
+  --color-muted-foreground: #6e7681;
+  --color-accent: #1f6feb;
+  --color-accent-foreground: #ffffff;
+  --color-border: #21262d;
+  --color-ring: #1f6feb;
+  --color-danger: #da3633;
+  --color-warning: #d29922;
+  --color-success: #3fb950;
+  --radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+
+/* Subtle scanline overlay */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 0;
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Manage KASM controller operations with easy start and stop controls, enabling efficient system management for IT administrators and users.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
